@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/nLayaredDemo/Main.java=UTF-8
+encoding//src/nLayaredDemo/business/abstracts/ProductService.java=UTF-8
+encoding//src/nLayaredDemo/business/concretes/ProductManager.java=UTF-8
+encoding//src/nLayaredDemo/dataAccess/abstracts/ProductDao.java=UTF-8
+encoding//src/nLayaredDemo/dataAccess/concretes/HibernateProductDao.java=UTF-8
+encoding//src/nLayaredDemo/entities/concretes/Product.java=UTF-8
+encoding//src/nLayaredDemo/jLogger/JLoggerManager.java=UTF-8
