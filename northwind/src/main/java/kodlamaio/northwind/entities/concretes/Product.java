@@ -3,22 +3,32 @@ package kodlamaio.northwind.entities.concretes;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+@Data
 @Entity
-@Table(name="products")
 //anotasyon
 //bu hareketi yapaarak product bir entity diyoruz
+@Table(name="products")
+@AllArgsConstructor
+//tüm argümanları kullanarak constructor ekle 
+@NoArgsConstructor
+//parametresiz olan constr. için
 
-@Data
+
+
+
 
 public class Product {
 	
 	@Id
 	//primary key bu olduğundan işlemler buna göre belirlenecek o yüzden bu şekilde yazmamız lazım	
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	//id nin 1 1 arttırılacağını söylemiş oldu
 	@Column(name="product_id")
 private int id;
@@ -38,20 +48,5 @@ private short unitsInStock;
 	@Column(name="quantity_per_unit")
 private String quantityPerUnit;
 	
-	public Product() 
-	{
-		
-	}
-	
-public Product(int id, int categoryId, String productName, double unitPrice, short unitsInStock,
-		String quantityPerUnit) {
-	super();
-	this.id = id;
-	this.categoryId = categoryId;
-	this.productName = productName;
-	this.unitPrice = unitPrice;
-	this.unitsInStock = unitsInStock;
-	this.quantityPerUnit = quantityPerUnit;
-}
 
 }
